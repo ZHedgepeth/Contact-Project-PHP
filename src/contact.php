@@ -15,45 +15,46 @@
 
         function setName($new_name)
         {
-              $this->name = (string) $new_name;
+            $this->name = (string) $new_name;
         }
         function getName()
         {
-              return $this->name;
-        }
-
-        function setNumber($new_number)
-        {
-              $this->number = (string) $new_number;
-        }
-        function getNumber()
-        {
-              return $this->number;
+            return $this->name;
         }
 
         function setAddress($new_address)
         {
-              $this->address = (string) $new_address;
+            $this->address = (string) $new_address;
         }
         function getAddress()
         {
-              return $this->address;
+            return $this->address;
+        }
+
+        function setNumber($new_number)
+        {
+            $this->number = (string) $new_number;
+        }
+        function getNumber()
+        {
+            return $this->number;
         }
 
         static function getAll()
         {
-              return $_SESSION['list_of_contacts'];
+            return $_SESSION['list_of_contacts'];
         }
 
         static function deleteAll()
         {
-              $_SESSION['list_of_contacts'] = array();
+            $_SESSION['list_of_contacts'] = array();
         }
 
         function save()
         {
-              array_push($_SESSION['list_of_contacts'], $this);
+            array_push($_SESSION['list_of_contacts'], $this);
         }
-      }
+
+    }
 
 ?>

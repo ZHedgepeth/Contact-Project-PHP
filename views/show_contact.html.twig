@@ -1,36 +1,36 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <title>Job listings. Top hits.</title>
+        <title>Contacts</title>
     </head>
     <body>
         <div class="container">
-        <h1>Things needing taking care of:</h1>
+        <h1>Enter your contact info below!</h1>
 
-        {% if contact is not empty %}
-            <p>Here are all your jobs:</p>
+        {% if contacts is not empty %}
+            <p>Here are all your contacts:</p>
             <ul>
                 {% for contact in contacts %}
                     <li>{{ contact.getName }}</li>
-                    <li>{{ contact.getNumber }}</li>
                     <li>{{ contact.getAddress }}</li>
+                    <li>{{ contact.getNumber }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
 
         <form action="/contact" method="post">
           <div class="form-group">
-              <label for="name">Job Title</label>
-              <input type="text" class="form-control" name="title" id="title">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" name="name" id="name">
 
-              <label for="address">Email</label>
+              <label for="address">Address</label>
               <input type="text" class="form-control" name="address" id="address">
 
               <label for="phone">Phone Number</label>
-              <input type="text" class="form-control" name="phone" id="phone">
+              <input type="text" class="form-control" name="number" id="number">
           </div>
 
-            <button type="submit" class="btn btn-success">CONFIRM.</button>
+            <button type="submit" class="btn btn-success">ADD CONTACT</button>
         </form>
         <form action='/delete_contacts' method='post'>
             <button type='submit'>Clear</button>
