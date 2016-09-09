@@ -36,8 +36,8 @@ User presses a button to submit the aforesaid info.
 
 User presses a button to clear all contacts in the list of added contacts.
   * example input: "clear"
-  * example output: " "
+  * example output: "  "
 
 #### License
 
-  Copyright (c) 2016 **Zachary Hedgepeth**
+  Copyright (c) 2016 **Zachary Max Hedgepeth**
