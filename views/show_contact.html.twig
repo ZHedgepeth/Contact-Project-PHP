@@ -7,17 +7,6 @@
         <div class="container">
         <h1>Enter your contact info below!</h1>
 
-        {% if contacts is not empty %}
-            <p>You created a contact!</p>
-            <ul>
-                {% for contact in contacts %}
-                    <li>{{ contact.getName }}</li>
-                    <li>{{ contact.getAddress }}</li>
-                    <li>{{ contact.getNumber }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
         <form action="/create_contacts" method="post">
           <div class="form-group">
               <label for="name">Name</label>
@@ -32,7 +21,20 @@
 
             <button type="submit" class="btn btn-success">ADD CONTACT</button>
         </form>
+
+            {% if contacts is not empty %}
+                <p>You created a contact!</p>
+                <ul>
+                    {% for contact in contacts %}
+                        <li>Name: {{ contact.getName }}</li>
+                        <li>Address: {{ contact.getAddress }}</li>
+                        <li>Phone Number: {{ contact.getNumber }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
         <form action='/delete_contacts' method='post'>
+          <br>
             <button type='submit'>Clear</button>
         </form>
         </div>

@@ -31,8 +31,8 @@ User inputs a name, address and number into the appropriates fields labeled name
 User presses a button to submit the aforesaid info.
   * example input: "add contact"
   * example output:"-Zach
-                  -201 Buttonshirt Dr.
-                  -2155555555"
+                    -201 Buttonshirt Dr.
+                    -2155555555"
 
 User presses a button to clear all contacts in the list of added contacts.
   * example input: "clear"
