@@ -40,12 +40,12 @@
               return $this->address;
         }
 
-        function getAll()
+        static function getAll()
         {
               return $_SESSION['list_of_contacts'];
         }
 
-        function deleteAll()
+        static function deleteAll()
         {
               $_SESSION['list_of_contacts'] = array();
         }
