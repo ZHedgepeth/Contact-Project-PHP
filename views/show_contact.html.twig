@@ -8,7 +8,7 @@
         <h1>Enter your contact info below!</h1>
 
         {% if contacts is not empty %}
-            <p>Here are all your contacts:</p>
+            <p>You created a contact!</p>
             <ul>
                 {% for contact in contacts %}
                     <li>{{ contact.getName }}</li>
@@ -18,7 +18,7 @@
             </ul>
         {% endif %}
 
-        <form action="/contact" method="post">
+        <form action="/create_contacts" method="post">
           <div class="form-group">
               <label for="name">Name</label>
               <input type="text" class="form-control" name="name" id="name">
